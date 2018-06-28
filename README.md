@@ -11,7 +11,7 @@ Use -v option for verbose mode
 
 files needed: `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
 
-usage: `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
+*usage:* `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
 
 
 **2nd)** Run QM inputs in Gaussian, put outputs in qm_outs directory; 
@@ -21,34 +21,35 @@ usage: `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
 
 files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `conffit.in`
 
-usage: `./conffit.sh -f -i conffit.in -r RES [residue name] `
+*usage:* `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
 
 **Posterior Analysis:**
 
 - Visualise structure quality with Scatterplots, using -s option;
   - files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `prms.in`, `energy_qm_RES.dat`
-  - usage: `./conffit.sh -s -r RES [residue name]`
+  - *usage:* `./conffit.sh -s -r RES [residue name]`
 *in verbose mode, the plot will be shown, so **gnuplot** is necessary
 
 
 - Visualise torsional barrier profile, using -t option; 
   - files needed: `guess.frcmod`, `fitted.frcmod`
-  - usage: `./conffit.sh -t -d c3-c3-c3-hc [dihedral] -g guess.frcmod -p fitted.frcmod`
+  - *usage:* `./conffit.sh -t -d c3-c3-c3-hc [dihedral] -g guess.frcmod -p fitted.frcmod`
 *in verbose mode, the plot will be shown, so **python** is necessary 
 
 
-### Conforma (-c option):
+### ~ Conforma (-c option):
 Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). For this step, it’s necessary some `definitions in conffit.in`:
 
-**Parameters to fit** - look carefully to the mol2 file definitions!
-- **usage:** atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
-*Bonds in Angstrom, angles and dihedral in degrees
-*N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit.
-  - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!
-  - if you don't wan't some parameter fitting, remove its section completely!
+- **Parameters to fit** - look carefully to the mol2 file definitions!
+  - usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
+  *Bonds in Angstrom, angles and dihedral in degrees
+  *N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit.
+    - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!
+    - if you don't wan't some parameter fitting, remove its section completely!
 
-**Example:**
+*Example:*
+
 ```
 $bond
 c3 J3 | C2 CJ3 | 1.0 2.0 
@@ -70,8 +71,8 @@ c3 c3 J3 SI | C1 C2 CJ3 SI | 0 180 | 3
 $enddihedral
 ```
 
-- New atom type info for tleap - if you don't need this, remove completely this section!
-**Example:**
+  - New atom type info for tleap - if you don't need this, remove completely this section!
+*Example:*
 ```
  $addAT
 addAtomTypes {
@@ -83,32 +84,37 @@ addAtomTypes {
  $endaddAT
 ```
 
-- How generate conformations - random or fixeddt
+  - How generate conformations - random or fixeddt
 *default is random (you can remove this section)
 *with fixeddt, variation of parameter between each conformer will be calculated by: (range of parameter to fit / nstructures)
 
-**Usage:**
+*Usage:*
+
 `$genconf = fixeddt`
 
-- Number of conformers to generate - value before equal, maintaining spaces
+  - Number of conformers to generate - value before equal, maintaining spaces
 
-**Usage:**
+*Usage:*
+
 `$nstruct = 50`
 
-- Name of force field source, for tleap input - value before equal, maintaining spaces
+  - Name of force field source, for tleap input - value before equal, maintaining spaces
+  
+*Usage:*
 
-**Usage:**
 `$ff = leaprc.gaff`
 
-- Energy cutoff (kcal/mol) for bad structures - value before equal, maintaining spaces
+  - Energy cutoff (kcal/mol) for bad structures - value before equal, maintaining spaces
 
-**Usage:**
+*Usage:*
+
 `$encutoff = 2000.0`
 
-- Info for GAUSSIAN QM inputs - value before equal, maintaining spaces
+  - Info for GAUSSIAN QM inputs - value before equal, maintaining spaces
 *other packages will need codification of conffit.in and conffit.sh!
 
-**Usage:**
+*Usage:*
+
 `$nproc = 2`
 
 `$mem = 256MB`
