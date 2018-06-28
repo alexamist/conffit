@@ -21,7 +21,7 @@ files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `c
 
 usage: `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
-**4th)** Visualise structure quality with Scatterplots, using -s option; 
+**4th) +** Visualise structure quality with Scatterplots, using -s option;
 
 files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `prms.in`, `energy_qm_RES.dat`
 
@@ -29,7 +29,7 @@ usage: `./conffit.sh -s -r RES [residue name]`
 
 *in verbose mode, the plot will be shown, so **gnuplot** is necessary
 
-Visualise torsional barrier profile, using -t option; 
+**+** Visualise torsional barrier profile, using -t option; 
 
 files needed: `guess.frcmod`, `fitted.frcmod`
 
