@@ -7,22 +7,15 @@ Automatized steps of Paramfit tutorial (http://ambermd.org/tutorials/advanced/tu
 
 Use -v option for verbose mode 
 
-**1st)** Generate conformations with Conforma, using -c option;
+**1°)** Generate conformations with Conforma, using -c option;
+  - *files needed:* `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
+  - *usage:* `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
 
-*files needed:* `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
+**2°)** Run QM inputs in Gaussian, put outputs in qm_outs directory; 
 
-*usage:* `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
-
-
-**2nd)** Run QM inputs in Gaussian, put outputs in qm_outs directory; 
-
-
-**3rd)** Run Fitting with -f option;
-
-*files needed:* `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `conffit.in`
-
-*usage:* `./conffit.sh -f -i conffit.in -r RES [residue name] `
-
+**3°)** Run Fitting with -f option;
+  - *files needed:* `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `conffit.in`
+  - *usage:* `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
 **Posterior Analysis:**
 
