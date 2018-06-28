@@ -21,7 +21,9 @@ files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `c
 
 usage: `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
-**4th) +** Visualise structure quality with Scatterplots, using -s option;
+**4th) **
+
+**+** Visualise structure quality with Scatterplots, using -s option;
 
 files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `prms.in`, `energy_qm_RES.dat`
 
