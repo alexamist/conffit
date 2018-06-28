@@ -38,8 +38,8 @@ Generate conformations for single point QM calculations in Gaussian, starting fr
   - usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
   - Bonds in Angstrom, angles and dihedral in degrees
   - N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit 
-   - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!  
-   - if you don't wan't some parameter fitting, remove its section completely!
+    - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!  
+    - if you don't wan't some parameter fitting, remove its section completely!
 
 *Example:*
 
