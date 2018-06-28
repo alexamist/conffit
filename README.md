@@ -9,7 +9,7 @@ Use -v option for verbose mode
 
 **1st)** Generate conformations with Conforma, using -c option;
 
-files needed: `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
+*files needed:* `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
 
 *usage:* `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
 
@@ -19,7 +19,7 @@ files needed: `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
 
 **3rd)** Run Fitting with -f option;
 
-files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `conffit.in`
+*files needed:* `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `conffit.in`
 
 *usage:* `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
@@ -35,7 +35,7 @@ files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `c
 - Visualise torsional barrier profile, using -t option; 
   - files needed: `guess.frcmod`, `fitted.frcmod`
   - *usage:* `./conffit.sh -t -d c3-c3-c3-hc [dihedral] -g guess.frcmod -p fitted.frcmod`
-*in verbose mode, the plot will be shown, so **python** is necessary 
+  - in verbose mode, the plot will be shown, so **python** is necessary 
 
 
 ### ~ Conforma (-c option):
@@ -43,10 +43,10 @@ Generate conformations for single point QM calculations in Gaussian, starting fr
 
 - **Parameters to fit** - look carefully to the mol2 file definitions!
   - usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
-  *Bonds in Angstrom, angles and dihedral in degrees
-  *N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit.
-    - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!
-    - if you don't wan't some parameter fitting, remove its section completely!
+  - Bonds in Angstrom, angles and dihedral in degrees
+  - N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit 
+   - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!  
+   - if you don't wan't some parameter fitting, remove its section completely!
 
 *Example:*
 
@@ -73,6 +73,7 @@ $enddihedral
 
   - New atom type info for tleap - if you don't need this, remove completely this section!
 *Example:*
+
 ```
  $addAT
 addAtomTypes {
@@ -85,8 +86,8 @@ addAtomTypes {
 ```
 
   - How generate conformations - random or fixeddt
-*default is random (you can remove this section)
-*with fixeddt, variation of parameter between each conformer will be calculated by: (range of parameter to fit / nstructures)
+    - default is random (you can remove this section)
+    - with fixeddt, variation of parameter between each conformer will be calculated by: (range of parameter to fit / nstructures)
 
 *Usage:*
 
@@ -111,7 +112,7 @@ addAtomTypes {
 `$encutoff = 2000.0`
 
   - Info for GAUSSIAN QM inputs - value before equal, maintaining spaces
-*other packages will need codification of conffit.in and conffit.sh!
+    - other packages will need codification of conffit.in and conffit.sh!
 
 *Usage:*
 
