@@ -7,13 +7,13 @@ Automatized steps of Paramfit tutorial (http://ambermd.org/tutorials/advanced/tu
 
 Use -v option for verbose mode 
 
-**1°)** Generate conformations with Conforma, using -c option;
+**1st)** Generate conformations with Conforma, using -c option;
   - *files needed:* `mol2name.mol2`, `mol2name.frcmod`, `conffit.in`
   - *usage:* `./conffit.sh -c -i conffit.in -m mol2name -r RES [residue name] `
 
-**2°)** Run QM inputs in Gaussian, put outputs in qm_outs directory; 
+**2nd)** Run QM inputs in Gaussian, put outputs in qm_outs directory; 
 
-**3°)** Run Fitting with -f option;
+**3rd)** Run Fitting with -f option;
   - *files needed:* `RES.prmtop`, `RES_valid_structures.mdcrd`, `qm_outs/RES*.out`, `conffit.in`
   - *usage:* `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
@@ -32,7 +32,7 @@ Use -v option for verbose mode
 
 
 ### ~ Conforma (-c option):
-Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). For this step, it’s necessary some `definitions in conffit.in`:
+Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). For this step, it’s necessary some **definitions in conffit.in**:
 
 - **Parameters to fit** - look carefully to the mol2 file definitions!
   - usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
