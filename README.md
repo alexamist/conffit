@@ -26,30 +26,26 @@ usage: `./conffit.sh -f -i conffit.in -r RES [residue name] `
 
 **Posterior Analysis:**
 
-**+** Visualise structure quality with Scatterplots, using -s option;
-
-files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `prms.in`, `energy_qm_RES.dat`
-
-usage: `./conffit.sh -s -r RES [residue name]`
-
+- Visualise structure quality with Scatterplots, using -s option;
+  - files needed: `RES.prmtop`, `RES_valid_structures.mdcrd`, `prms.in`, `energy_qm_RES.dat`
+  - usage: `./conffit.sh -s -r RES [residue name]`
 *in verbose mode, the plot will be shown, so **gnuplot** is necessary
 
-**+** Visualise torsional barrier profile, using -t option; 
 
-files needed: `guess.frcmod`, `fitted.frcmod`
-
-usage: `./conffit.sh -t -d c3-c3-c3-hc [dihedral] -g guess.frcmod -p fitted.frcmod`
-
+- Visualise torsional barrier profile, using -t option; 
+  - files needed: `guess.frcmod`, `fitted.frcmod`
+  - usage: `./conffit.sh -t -d c3-c3-c3-hc [dihedral] -g guess.frcmod -p fitted.frcmod`
 *in verbose mode, the plot will be shown, so **python** is necessary 
 
+
 ### Conforma (-c option):
-Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). For this step, it’s necessary some definitions in conffit.in:
+Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). For this step, it’s necessary some `definitions in conffit.in`:
 
 **Parameters to fit** - look carefully to the mol2 file definitions!
 
-*If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!
+- If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!
 
-*if you don't wan't some parameter fitting, remove its section completely!
+- if you don't wan't some parameter fitting, remove its section completely!
 
 **usage:** atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
 
