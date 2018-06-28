@@ -59,49 +59,41 @@ Generate conformations for single point QM calculations in Gaussian, starting fr
 
 **Example:**
 
-` $bond
-
+```
+$bond
 c3 J3 | C2 CJ3 | 1.0 2.0 
-
 J3 SI | CJ3 SI | 1.3 2.3 
+$endbond
+```
 
-$endbond `
-
-` $angle
-
+```
+$angle
 c3 c3 J3 | C1 C2 CJ3 | 90 130 
-
 c3 J3 SI | C2 CJ3 SI | 90 130 
+$endangle
+```
 
-$endangle`
-
-` $dihedral
-
+```
+$dihedral
 c3 c3 J3 hc | C1 C2 CJ3 H6 | 0 180 | 1
-
 c3 c3 J3 SI | C1 C2 CJ3 SI | 0 180 | 3
-
-$enddihedral`
+$enddihedral
+```
 
 *New atom type info for tleap - if you don't need this, remove completely this section!
 
 **Example:**
 
-` $addAT
-
+```
+ $addAT
 addAtomTypes {
-
-{ "SI"  "Si" "sp3" }
-
-{ "J3"  "C" "sp3" }
-
-{ "QS"  "O" "sp3" }
-
-{ "QH"  "O" "sp3" }
-
+        { "SI"  "Si" "sp3" }
+        { "J3"  "C" "sp3" }
+        { "QS"  "O" "sp3" }
+        { "QH"  "O" "sp3" }
 }
-
-$endaddAT`
+ $endaddAT
+```
 
 *How generate conformations - random or fixeddt
 
