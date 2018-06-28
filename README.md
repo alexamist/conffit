@@ -1,7 +1,7 @@
 ### Conffit.sh v. 1.0
 
 Script for parameterizing single molecules using Paramfit.
-Automatized steps of Paramfit tutorial (http://ambermd.org/tutorials/advanced/tutorial23/index.html), avoiding human errors.
+Automatized steps of Paramfit tutorial (http://ambermd.org/tutorials/advanced/tutorial23/index.html), avoiding human errors, and some other tools.
 
 ### Quick Guide:
 
@@ -32,9 +32,11 @@ Use -v option for verbose mode
 
 
 ### ~ Conforma (-c option):
-Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). For this step, it’s necessary some **definitions in conffit.in**:
+Generate conformations for single point QM calculations in Gaussian, starting from a .mol2 and .frcmod (if necessary). 
 
-- **Parameters to fit** - look carefully to the mol2 file definitions!
+For this step, it's necessary some **definitions in conffit.in**:
+
+- Parameters to fit (look carefully to the mol2 file definitions!)
   - usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
   - Bonds in Angstrom, angles and dihedral in degrees
   - N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit 
@@ -114,3 +116,81 @@ addAtomTypes {
 `$mem = 256MB`
 
 `$level = PBE1PBE/Def2TZVP`
+
+### ~ Fitting (-f option):
+With Gaussian **.outs** at `qm_outs` directory, you can fit K and some selected parameters.
+
+For this step, it's necessary some **definitions in conffit.in**:
+
+- Parameters to fit (look carefully to the mol2 file definitions!)
+  - usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
+  - Bonds in Angstrom, angles and dihedral in degrees
+  - N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit 
+    - If you have MORE THAN 1 residue, conffit.sh will need modifications in tleap input file for conformers generation!  
+    - if you don't wan't some parameter fitting, remove its section completely!
+
+*Example:*
+
+```
+$bond
+c3 J3 | C2 CJ3 | 1.0 2.0 
+J3 SI | CJ3 SI | 1.3 2.3 
+$endbond
+```
+
+```
+$angle
+c3 c3 J3 | C1 C2 CJ3 | 90 130 
+c3 J3 SI | C2 CJ3 SI | 90 130 
+$endangle
+```
+
+```
+$dihedral
+c3 c3 J3 hc | C1 C2 CJ3 H6 | 0 180 | 1
+c3 c3 J3 SI | C1 C2 CJ3 SI | 0 180 | 3
+$enddihedral
+```
+
+- Terms to fit
+  - default: all terms are going to be fitted (equilibrium lengths, constants, etc), and you can remove this section
+  - options - separated by spaces:
+```
+for bonds: REQ - fit equilibrium bond length
+            KR - fit force constant
+
+for angles: THEQ - fit equilibrium angle value
+              KT - fit force constant
+
+for dihedrals: KP - fit barrier term
+               NP - fit periodicity term
+            PHASE - fit phase term
+
+```
+*Example:*
+
+```
+$fitting
+REQ
+KT
+PHASE
+$endfitting
+```
+
+ # algorithm options for fitting - see paramfit manual
+  # change to improve convergence
+
+$ALGORITHM = GENETIC
+$OPTIMIZATIONS = 50
+$MAX_GENERATIONS = 10000
+$GENERATIONS_TO_CONV = 20
+$GENERATIONS_TO_SIMPLEX = 5
+$GENERATIONS_WITHOUT_SIMPLEX = 5
+$MUTATION_RATE = 0.100000
+$PARENT_PERCENT = 0.250000
+$SEARCH_SPACE = -1.000000
+
+
+### ~ Scatterplots (-s option):
+
+### ~ Print Torsions (-t option):
