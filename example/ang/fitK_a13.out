@@ -1,0 +1,306 @@
+
+                *****************************************************
+                * AMBER Bond Angle and Dihedral Parameter Optimiser *
+                *                                                   *
+                *                      v3.0.0                       *
+                *                                                   *
+                *                    Written by:                    *
+                *                 Robin Betz (2011)                 *
+                *                 Ross Walker (2004)                *
+                *          The Walker Molecular Dynamics Lab        *
+                *         University of California, San Diego       *
+                *            La Jolla, California, 92092            *
+                *                       USA                         *
+                *****************************************************
+
+*************************************************************************************
+                                Execution started at:
+|                             Wed Aug 29 16:42:54 2018
+
+|
+| Random seed = 1535571774
+ Reading job control file: fitK_a13.in
+ Job Control: Read a total of 10 lines from job_control file. 6 options set.
+
+  Reading prmtop file    : a13.prmtop
+   Prmtop   (unique): Found 10 unique bonds.
+   Prmtop   (unique): Found 16 unique angles.
+   Prmtop   (unique): Found 15 unique dihedrals.
+   Prmtop   (unique): Found 19 unique dihedral terms.
+ Reading mdcrd file: a13_valid_structures.mdcrd
+  Reading mdcrd file    : a13_valid_structures.mdcrd
+    Coordinate file passed format check
+  Reading energy file or directory  : energy_qm_a13.dat
+        ---------------------------------------------------------------------
+        |                          OPTIONS SUMMARY                         |
+        |                          ---------------                          |
+        | Summary of Run Type Options:                                      |
+        |   Run Mode = FIT, Minimiser = SIMPLEX                             |
+        |   Function to be Fit = SUM_SQUARES_AMBER_STANDARD                 |
+        |                                                                   |
+        | Terms to be fit:                                                  |
+        |   K = 1, UNIQUE_BONDS = 10, UNIQUE ANGLES = 16                    |
+        |   UNIQUE DIHEDRALS = 15  TOTAL DIHEDRAL TERMS = 19                |
+        |   NBONDS = 15, NANGLES = 26, NDIHEDRALS = 33                      |
+        |                                 Total dimensions of fit = 1       |
+        |                                                                   |
+        | Sample structures for least squares fit = 120                     |
+        |                                                                   |
+        |                                                                   |
+        | Energy Correction Term (K) = TO BE FIT                            |
+        |                                                                   |
+        |           BONDFC_dx =     5.0000                                  |
+        |           BONDEQ_dx =     0.0200                                  |
+        |          ANGLEFC_dx =     1.0000                                  |
+        |          ANGLEEQ_dx =     0.0500                                  |
+        |       DIHEDRALBH_dx =     0.2000                                  |
+        |        DIHEDRALN_dx =     0.0100                                  |
+        |        DIHEDRALG_dx =     0.0500                                  |
+        |              K_dx =    10.0000                                    |
+        |                                                                   |
+        | Convergence requested to within 1.0000E-15                        |
+        |                                                                   |
+        | Estimate Memory Usage (per cpu):                                  |
+        |  Coordinate info will be read from disk as required.              |
+        |                OPTION STORAGE = 66 bytes                          |
+        |                PRMTOP STORAGE = 371394 bytes                      |
+        |            COORDINATE STORAGE = 53800 bytes                       |
+        |         SIMPLEX ARRAY STORAGE = 168 bytes                         |
+        |                                                                   |
+        |  TOTAL ESTIMATED MEMORY USAGE = 425428 bytes                      |
+        |                                                                   |
+        ---------------------------------------------------------------------
+
+ * Input structures passed dihedral span check.
+
+   ------------------------------- INITIAL PARAMETERS --------------------------------
+   Parameters for force field equation: AMBER_STANDARD:
+   (* means parameter is NOT constant during fit)
+                         *K = 0.000000 kcal/mol
+             (hc-c3) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (J3-hc) Kr = 333.1540 kcal/(mol A)^2, r_eq =   1.0950 A 
+             (SI-ha) Kr = 239.0000 kcal/(mol A)^2, r_eq =   1.4600 A 
+             (QH-ho) Kr = 400.1280 kcal/(mol A)^2, r_eq =   0.9570 A 
+             (c3-h1) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (c3-J3) Kr = 309.5690 kcal/(mol A)^2, r_eq =   1.5280 A 
+             (J3-SI) Kr = 130.2950 kcal/(mol A)^2, r_eq =   1.8520 A 
+             (SI-QH) Kr = 162.7980 kcal/(mol A)^2, r_eq =   1.6500 A 
+             (SI-QS) Kr = 170.0960 kcal/(mol A)^2, r_eq =   1.6340 A 
+             (QS-c3) Kr = 333.4290 kcal/(mol A)^2, r_eq =   1.4070 A 
+        (hc-c3-J3) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (hc-c3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (c3-J3-hc) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (J3-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (hc-J3-SI) Kt =  38.7870 kcal/(mol rad)^2,  th_eq = 107.5600 deg 
+        (hc-J3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (SI-QH-ho) Kt =  38.8180 kcal/(mol rad)^2,  th_eq = 117.1851 deg 
+        (QH-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-c3-h1) Kt =  50.8000 kcal/(mol rad)^2,  th_eq = 109.7800 deg 
+        (h1-c3-h1) Kt =  39.2400 kcal/(mol rad)^2,  th_eq = 108.4600 deg 
+        (c3-J3-SI) Kt =  55.3870 kcal/(mol rad)^2,  th_eq = 114.5880 deg 
+        (J3-SI-QH) Kt =  55.8640 kcal/(mol rad)^2,  th_eq = 114.0510 deg 
+        (J3-SI-QS) Kt =  57.7270 kcal/(mol rad)^2,  th_eq = 107.5420 deg 
+        (SI-QS-c3) Kt =  55.0040 kcal/(mol rad)^2,  th_eq = 126.7111 deg 
+        (QH-SI-QS) Kt =  63.6390 kcal/(mol rad)^2,  th_eq = 107.5290 deg 
+       (hc-c3-J3-hc) Kp =   0.1500 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-c3-J3-SI) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (SI-QS-c3-h1) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QS-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QH) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QS) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QS-c3) Kp =   0.1000 kcal/mol,  Np = 2.0000,  Phase = 180.0001 Deg 
+       (J3-SI-QS-c3) Kp =   0.3800 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QH-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+   -----------------------------------------------------------------------------------
+   Sum of squares for initial parameters = 14814156037465.5781250000 kcal^2/mol^2
+   R^2 value for initial parameters      =   0.911276
+   Calculated energy with initial parameters for structure 1 = -76.595521 KCal/mol
+   Actual energy for structure 1 should be                   = -351429.184654 KCal/mol
+
+   --------------------------------- SIMPLEX MINIMISATION ----------------------------
+   Minimising function SUM_SQUARES_AMBER_STANDARD, using the SIMPLEX METHOD
+   -------------------------------------- CONVERGENCE --------------------------------
+   Step     0: Conv=  5.6086E-05 min=14814156037465.5781,max=14814986933882.3203 avg14814571485673.9492
+   Step     1: Conv=  7.2366E-01 min= 123273.2849 max= 263060.4884 avg= 193166.8867
+   Step     2: Conv=  6.9123E-13 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     3: Conv=  4.5405E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     4: Conv=  4.8697E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     5: Conv=  5.8025E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     6: Conv=  4.5268E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     7: Conv=  4.5817E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     8: Conv=  6.1455E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step     9: Conv=  5.8986E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    10: Conv=  4.5817E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    11: Conv=  6.0083E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    12: Conv=  5.0344E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    13: Conv=  6.1729E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    14: Conv=  5.6654E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    15: Conv=  5.7614E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    16: Conv=  5.0755E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    17: Conv=  5.4047E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    18: Conv=  5.1578E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    19: Conv=  4.9246E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    20: Conv=  5.1441E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    21: Conv=  4.4994E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    22: Conv=  4.8697E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    23: Conv=  4.7051E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    24: Conv=  5.0755E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    25: Conv=  6.1180E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    26: Conv=  4.3622E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    27: Conv=  6.1180E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    28: Conv=  5.3773E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    29: Conv=  5.8025E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    30: Conv=  5.1990E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    31: Conv=  6.0632E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    32: Conv=  4.6365E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    33: Conv=  5.3224E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    34: Conv=  4.3896E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    35: Conv=  5.3224E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    36: Conv=  4.9383E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    37: Conv=  4.6914E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    38: Conv=  5.8163E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    39: Conv=  4.9658E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    40: Conv=  4.4582E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    41: Conv=  4.1976E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    42: Conv=  4.7600E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    43: Conv=  5.2538E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    44: Conv=  6.1043E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    45: Conv=  4.2799E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    46: Conv=  4.6914E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    47: Conv=  4.9383E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    48: Conv=  5.4184E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    49: Conv=  5.7477E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    50: Conv=  5.6928E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    51: Conv=  4.4994E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    52: Conv=  5.9534E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    53: Conv=  4.2662E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    54: Conv=  4.9109E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    55: Conv=  4.7326E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    56: Conv=  6.1729E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    57: Conv=  5.0618E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    58: Conv=  4.7051E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    59: Conv=  5.3499E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    60: Conv=  4.6640E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    61: Conv=  5.7751E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    62: Conv=  5.2538E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    63: Conv=  5.0344E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    64: Conv=  4.8697E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    65: Conv=  5.3636E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    66: Conv=  4.2525E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    67: Conv=  5.6379E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    68: Conv=  5.9946E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    69: Conv=  5.8163E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    70: Conv=  4.4171E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    71: Conv=  6.2004E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    72: Conv=  5.8300E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    73: Conv=  4.8835E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    74: Conv=  5.0892E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    75: Conv=  5.7751E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    76: Conv=  4.9658E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    77: Conv=  5.7751E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    78: Conv=  4.5268E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    79: Conv=  4.2525E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    80: Conv=  5.2401E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    81: Conv=  5.9809E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    82: Conv=  4.4171E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    83: Conv=  4.9383E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    84: Conv=  6.0769E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    85: Conv=  5.1990E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    86: Conv=  5.7065E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    87: Conv=  6.0357E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    88: Conv=  6.1043E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    89: Conv=  6.2004E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    90: Conv=  5.0755E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    91: Conv=  4.4994E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    92: Conv=  5.7202E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    93: Conv=  6.2004E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    94: Conv=  5.3773E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    95: Conv=  4.2525E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    96: Conv=  5.4184E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    97: Conv=  5.3224E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    98: Conv=  5.8025E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step    99: Conv=  5.0206E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step   100: Conv=  5.0618E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step   101: Conv=  5.9672E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   Step   102: Conv=  5.0344E-14 min=    207.1916 max=    207.1916 avg=    207.1916
+   -----------------------------------------------------------------------------------
+
+   Minimum function value of     207.191637 has not changed in 100 cycles
+   Assuming Function Has Converged - Total function evaluations = 5304
+
+!  Warning - Convergence criteria of 1.0000E-15 was not met.
+!            You should check the converged parameters carefully.
+
+!  PARAMETERS FOR FINAL STEP FOLLOW:
+!  Warning - final parameters do NOT represent a converged fit.
+   ------------------------------- FINAL PARAMETERS ---------------------------------
+   Parameters for force field equation: AMBER_STANDARD:
+   (* means parameter is NOT constant during fit)
+                         *K = -351356.372235 kcal/mol
+             (hc-c3) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (J3-hc) Kr = 333.1540 kcal/(mol A)^2, r_eq =   1.0950 A 
+             (SI-ha) Kr = 239.0000 kcal/(mol A)^2, r_eq =   1.4600 A 
+             (QH-ho) Kr = 400.1280 kcal/(mol A)^2, r_eq =   0.9570 A 
+             (c3-h1) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (c3-J3) Kr = 309.5690 kcal/(mol A)^2, r_eq =   1.5280 A 
+             (J3-SI) Kr = 130.2950 kcal/(mol A)^2, r_eq =   1.8520 A 
+             (SI-QH) Kr = 162.7980 kcal/(mol A)^2, r_eq =   1.6500 A 
+             (SI-QS) Kr = 170.0960 kcal/(mol A)^2, r_eq =   1.6340 A 
+             (QS-c3) Kr = 333.4290 kcal/(mol A)^2, r_eq =   1.4070 A 
+        (hc-c3-J3) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (hc-c3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (c3-J3-hc) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (J3-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (hc-J3-SI) Kt =  38.7870 kcal/(mol rad)^2,  th_eq = 107.5600 deg 
+        (hc-J3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (SI-QH-ho) Kt =  38.8180 kcal/(mol rad)^2,  th_eq = 117.1851 deg 
+        (QH-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-c3-h1) Kt =  50.8000 kcal/(mol rad)^2,  th_eq = 109.7800 deg 
+        (h1-c3-h1) Kt =  39.2400 kcal/(mol rad)^2,  th_eq = 108.4600 deg 
+        (c3-J3-SI) Kt =  55.3870 kcal/(mol rad)^2,  th_eq = 114.5880 deg 
+        (J3-SI-QH) Kt =  55.8640 kcal/(mol rad)^2,  th_eq = 114.0510 deg 
+        (J3-SI-QS) Kt =  57.7270 kcal/(mol rad)^2,  th_eq = 107.5420 deg 
+        (SI-QS-c3) Kt =  55.0040 kcal/(mol rad)^2,  th_eq = 126.7111 deg 
+        (QH-SI-QS) Kt =  63.6390 kcal/(mol rad)^2,  th_eq = 107.5290 deg 
+       (hc-c3-J3-hc) Kp =   0.1500 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-c3-J3-SI) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (SI-QS-c3-h1) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QS-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QH) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QS) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QS-c3) Kp =   0.1000 kcal/mol,  Np = 2.0000,  Phase = 180.0001 Deg 
+       (J3-SI-QS-c3) Kp =   0.3800 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QH-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+   ----------------------------------------------------------------------------------
+|   Called the fitness function 5305 times.
+   Function value with fitted parameters  =      207.1916, R^2 =       0.9113
+   Calculated energy with fitted parameters for structure 1 =    -76.5955 KCal/mol
+
+ * Result passed angle validity check.
+ * Result passed bond validity check.
+
+|             Program Execution Completed at: Wed Aug 29 16:43:05 2018
+|                            Elapsed Time = 11.00 seconds
+*************************************************************************************

@@ -1,0 +1,12 @@
+source leaprc.gaff
+addAtomTypes {
+        { "SI"  "Si" "sp3" }
+        { "J3"  "C" "sp3" }
+        { "QS"  "O" "sp3" }
+        { "QH"  "O" "sp3" }
+}
+a13 = loadmol2 m3.mol2
+loadamberparams m3.frcmod
+impose a13 {1}, { {"CJ3" "SI" "OQH" 129.999960} }
+saveamberparm a13 a13.prmtop "amber_inps/a13_struc_119.mdcrd" 
+quit

@@ -1,0 +1,61 @@
+remark goes here
+MASS
+J3 12.01         0.878               c3 gaff.dat
+SI 28.08                             Si
+QH 16.00         0.465               oh gaff.dat
+QS 16.00         0.465               os gaff.dat
+
+BOND
+c3-J3   309.569         1.528   parmcal, sil_opt.out PBE0/def2-tzvp
+J3-hc   333.154         1.095   parmcal, sil_opt.out PBE0/def2-tzvp
+J3-SI   130.295         1.852   parmcal c3-c3, sil_opt.out PBE0/def2-tzvp
+SI-QH   162.798       	1.650	parmcal c3-oh, sil_opt.out PBE0/def2-tzvp
+SI-QS   170.096         1.634   parmcal c3-os, sil_opt.out PBE0/def2-tzvp
+SI-ha   239.000         1.460   SI-ha m1.itp GROMOS54A7, ATB
+QH-ho	400.128		0.957	parmcal, sil_opt.out PBE0/def2-tzvp
+QS-c3   333.429         1.407   parmcal, sil_opt.out PBE0/def2-tzvp
+
+ANGLE
+J3-c3-hc        46.34	   109.80          c3-c3-hc gaff.dat
+c3-J3-hc        46.34      109.80          c3-c3-hc gaff.dat
+c3-J3-SI        55.387     114.588         parmcal c3-c3-c3, sil_opt.out PBE0/def2-tzvp
+J3-SI-QH	55.864     114.051         parmcal c3-c3-oh, sil_opt.out PBE0/def2-tzvp
+J3-SI-QS	57.727     107.542	   parmcal c3-c3-os, sil_opt.out PBE0/def2-tzvp
+J3-SI-ha	47.78      109.50          J3-SI-ha m3.itp GROMOS54A7, ATB
+hc-J3-SI	38.787     107.560         parmcal hc-c3-c3, sil_opt.out PBE0/def2-tzvp
+hc-J3-hc	39.40      107.58          hc-c3-hc gaff.dat
+SI-QH-ho	38.818     117.185	   parmcal c3-oh-ho, sil_opt.out PBE0/def2-tzvp
+SI-QS-c3	55.004     126.711         parmcal c3-os-c3, sil_opt.out PBE0/def2-tzvp
+QH-SI-QS	63.639     107.529	   parmcal oh-c3-os, sil_opt.out PBE0/def2-tzvp
+QS-SI-ha	47.78      109.50          QS-SI-ha m3.itp GROMOS54A7, ATB
+QH-SI-ha	47.78      109.50          QH-SI-ha m3.itp GROMOS54A7, ATB
+QS-c3-h1	50.80      109.78          h1-c3-os gaff.dat
+
+DIHE
+hc-c3-J3-hc     1       0.15      0.0    3      hc-c3-c3-hc gaff.dat
+hc-c3-J3-SI     1       0.16      0.0    3      hc-c3-c3-c3 gaff.dat
+c3-J3-SI-QH     9       1.40      0.0    3      X -c3-c3-X  gaff.dat
+c3-J3-SI-QS     9       1.40      0.0    3      X -c3-c3-X  gaff.dat
+c3-J3-SI-ha     9       1.40      0.0    3      X -c3-c3-X  gaff.dat
+J3-SI-QH-ho     1       0.16      0.0   -3      ho-oh-c3-c3 gaff.dat
+J3-SI-QH-ho     1       0.25      0.0    1      ho-oh-c3-c3 gaff.dat
+J3-SI-QS-c3     1       0.38      0.0   -3      c3-c3-os-c3 gaff.dat
+J3-SI-QS-c3     1       0.10    180.0    2      c3-c3-os-c3 gaff.dat
+hc-J3-SI-QH     1       0.00      0.0   -3      hc-c3-c3-oh gaff.dat
+hc-J3-SI-QH     1       0.25      0.0    1      hc-c3-c3-oh gaff.dat
+hc-J3-SI-QS     1       0.00      0.0   -3      hc-c3-c3-os gaff.dat
+hc-J3-SI-QS     1       0.25      0.0    1      hc-c3-c3-os gaff.dat
+hc-J3-SI-ha     9       1.40      0.0    3      X -c3-c3-X  gaff.dat
+SI-QS-c3-h1     3       1.15      0.0    3      X -c3-os-X  gaff.dat
+QH-SI-QS-c3     3       1.15      0.0    3      X -c3-os-X  gaff.dat
+QS-SI-QH-ho     3       0.50      0.0    3      X -c3-oh-X  gaff.dat
+ha-SI-QH-ho     3       0.50      0.0    3      X -c3-oh-X  gaff.dat
+ha-SI-QS-c3     3       1.15      0.0    3      X -c3-os-X  gaff.dat
+
+IMPROPER
+
+NONBON
+  J3    1.9080          0.1094          c3 gaff.dat
+  SI    2.2200          0.3200          vdw_AMBER_parm99.defn
+  QH    1.7210          0.2104          oh gaff.dat
+  QS    1.6837          0.1700          os gaff.dat

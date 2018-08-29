@@ -1,0 +1,83 @@
+
+                *****************************************************
+                * AMBER Bond Angle and Dihedral Parameter Optimiser *
+                *                                                   *
+                *                      v3.0.0                       *
+                *                                                   *
+                *                    Written by:                    *
+                *                 Robin Betz (2011)                 *
+                *                 Ross Walker (2004)                *
+                *          The Walker Molecular Dynamics Lab        *
+                *         University of California, San Diego       *
+                *            La Jolla, California, 92092            *
+                *                       USA                         *
+                *****************************************************
+
+*************************************************************************************
+                                Execution started at:
+|                             Fri Jun 29 10:12:22 2018
+
+|
+| Random seed = 1530277942
+ Reading job control file: paramfit_qm_inp.in
+!  Error near line 0 of settings file, no '=' found - ignored.
+!  Error near line 3 of settings file, no '=' found - ignored.
+!  Error near line 6 of settings file, no '=' found - ignored.
+!  Error near line 7 of settings file, no '=' found - ignored.
+!  Error near line 9 of settings file, no '=' found - ignored.
+ Job Control: Read a total of 13 lines from job_control file. 7 options set.
+
+  Reading prmtop file    : d23.prmtop
+   Prmtop   (unique): Found 10 unique bonds.
+   Prmtop   (unique): Found 16 unique angles.
+   Prmtop   (unique): Found 15 unique dihedrals.
+   Prmtop   (unique): Found 19 unique dihedral terms.
+ Reading mdcrd file: d23_valid_structures.mdcrd
+  Reading mdcrd file    : d23_valid_structures.mdcrd
+    Coordinate file passed format check
+        ---------------------------------------------------------------------
+        |                          OPTIONS SUMMARY                         |
+        |                          ---------------                          |
+        | Summary of Run Type Options:                                      |
+        |              Mode = CREATE_INPUT,                                 |
+        |       File format = GAUSSIAN, Structures to write = 90            |
+        |   Filename format = qm_inps/d23##.gjf                             |
+        |                                                                   |
+        | Summary of structural info:                                       |
+        |    QMCHARGE = 0    MULTIPLICITY = 1                               |
+        |      NATOMS = 16     NATOMTYPES = 8       AMBERCHARGE = -0.0000   |
+        |      NBONDS = 15        NANGLES = 26       NDIHEDRALS = 33        |
+        |  NBONDTYPES = 10    NANGLETYPES = 16   NDIHEDRALTYPES = 9         |
+        |                                                                   |
+        | Estimate Memory Usage (per cpu):                                  |
+        |  Coordinate info will be read from disk as required.              |
+        |                OPTION STORAGE = 90 bytes                          |
+        |                PRMTOP STORAGE = 371394 bytes                      |
+        |            COORDINATE STORAGE = 40360 bytes                       |
+        |  TOTAL ESTIMATED MEMORY USAGE = 411844 bytes                      |
+        |                                                                   |
+        ---------------------------------------------------------------------
+
+   WARNING: hc-c3-J3-hc dihedral is missing 9 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: hc-c3-J3-SI dihedral is missing 9 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: c3-J3-SI-ha dihedral is missing 6 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: J3-SI-QH-ho dihedral is missing 10 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: hc-J3-SI-QH dihedral is missing 3 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: hc-J3-SI-ha dihedral is missing 1 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: SI-QS-c3-h1 dihedral is missing 9 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: QS-SI-QH-ho dihedral is missing 9 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: ha-SI-QH-ho dihedral is missing 10 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: ha-SI-QS-c3 dihedral is missing 10 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: J3-SI-QS-c3 dihedral is missing 10 data points in the range 0.0000 to 3.1416 radians.
+   WARNING: QH-SI-QS-c3 dihedral is missing 9 data points in the range 0.0000 to 3.1416 radians.
+
+
+   WARNING: Insufficient dihedral information in sample structures.
+            Your settings require at least 10 samples with data    
+            at least every 0.314 radians (18.00 degrees).            
+            Either 1) Add the missing input data or                
+                   2) Set DIHEDRAL_SPAN to a smaller value or      
+                   3) Set BOUNDS_CHECK to warn (not recommended).  
+            Please read the help and/or documentation.             
+
+*   Successfully wrote 90 files
