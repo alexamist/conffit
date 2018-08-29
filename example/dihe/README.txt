@@ -19,3 +19,4 @@
  7) Print potential energy profile, comparing guess parameters and fitted ones
     Type: ./conffit.sh -VTd c3-J3-SI-QS -g m3.frcmod -p fit_1_d23.frcmod 
     *with V option, python is needed
+    ploted image was saved as print_c3-J3-SI-QS.png
