@@ -19,9 +19,9 @@ For help, type:  `./conffit.sh -h`
 
 --Run fitting in 2 ways:
 
-  **d)** Fitting with paramfit, after running (in Gaussian) qm_inps generated in steps a) or b) (-F option); 
+  **d)** fitting with paramfit, after running (in Gaussian) qm_inps generated in steps a) or b) (-F option); 
 
-  **e)** Fitting with paramfit, after running (in Gaussian) a rigid PES scan (-G option);
+  **e)** fitting with paramfit, after running (in Gaussian) a rigid PES scan (-G option);
 
 
 --Visualise structure quality with Scatterplots (-S option);
