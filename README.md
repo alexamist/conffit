@@ -6,7 +6,7 @@ For help, type:  `./conffit.sh -h`
 
 ### Functionalities
 
-Generation of conformations in 3 ways:
+--Generation of conformations in 3 ways:
 
   **a)** imposing $RANDOM values (-C option, and `$genconf = random` at input - default);
 
@@ -14,12 +14,15 @@ Generation of conformations in 3 ways:
 
   **c)** from running a rigid PES scan in Gaussian (see example of input for gaussian); 
 
-Run fitting in 2 ways:
+
+--Run fitting in 2 ways:
 
   **d)** Fitting with paramfit, after running (in Gaussian) qm_inps generated in steps a) or b) (-F option); 
 
   **e)** Fitting with paramfit, after running (in Gaussian) a rigid PES scan (-G option);
 
-Visualise structure quality with Scatterplots (-S option);
 
-Visualise torsional barrier profile (-T option);
+--Visualise structure quality with Scatterplots (-S option);
+
+
+--Visualise torsional barrier profile (-T option);
