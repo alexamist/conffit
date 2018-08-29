@@ -8,9 +8,11 @@ For help, type:  `./conffit.sh -h`
 
 --Generation of conformations in 3 ways:
 
-  **a)** imposing $RANDOM values (-C option, and `$genconf = random` at input - default);
-
-  **b)** imposing specific values (-C option and `$genconf = fixeddt` at input); 
+  **a)** imposing $RANDOM values (-C option, and `$genconf = random` at input - default).
+  _$RANDOM generates a **normal** distribuition of values, so, probability of a value appear isn't iqual for all range (gaussian form)_;
+  
+  **b)** imposing fixed values bettween a specific range (-C option and `$genconf = fixeddt` at input).
+  _Ensure values in all desired range, separated by a fixed value, given by (range of parameter to fit / nstructures)_;
 
   **c)** from running a rigid PES scan in Gaussian (see example of input for gaussian); 
 
