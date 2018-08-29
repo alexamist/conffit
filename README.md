@@ -1,7 +1,7 @@
 ### Conffit.sh
 
 Script for parameterizing single molecules using Paramfit.
-Automatized steps of Paramfit tutorial (http://ambermd.org/tutorials/advanced/tutorial23/index.html), avoiding human errors, and some other tools.
+Automatized steps of Paramfit tutorial (http://ambermd.org/tutorials/advanced/tutorial23/index.html) and some other tools.
 
 ### Quick Guide:
 
