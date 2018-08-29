@@ -8,7 +8,7 @@
 
  # usage: atom TYPES | atom NAMES | range for generation of random conformations | N (terms, only in dihedral case)
  #	  bonds in Angstrom, angles and dihedral in degrees
-   # N (terms) is how many sets of barrier, phase and multiplicity are necessary to discribe some dihedral that you wanna fit.
+   # N (terms) is how many sets of barrier, phase and multiplicity are necessary to describe some dihedral that you wanna fit.
 
  $bond
 c3 J3 | C2 CJ3 | 1.0 2.0 
