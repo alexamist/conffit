@@ -4,7 +4,7 @@
 %NoSave
 #P PBE1PBE/Def2TZVP NoSymm scan
 
-structure 0
+example of rigid PES scan
 
 0 1
 O  
