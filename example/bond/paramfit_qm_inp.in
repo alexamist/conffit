@@ -1,0 +1,12 @@
+  # use the first 300 structures in the input trajectory format file
+NSTRUCTURES=300
+COORDINATE_FORMAT=TRAJECTORY
+  # we want to create quantum input files for the Gaussian package
+RUNTYPE=CREATE_INPUT
+QMFILEFORMAT=GAUSSIAN
+  # before the coordinates section in the input file, prepend the text in
+  # gaussian.header, which will specify the run options
+QMHEADER=gaussian.header
+  # name the files qm_inps/bm3###.gjf
+QMFILEOUTSTART=qm_inps/bm3
+QMFILEOUTEND=.gjf

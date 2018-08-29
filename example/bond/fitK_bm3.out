@@ -1,0 +1,205 @@
+
+                *****************************************************
+                * AMBER Bond Angle and Dihedral Parameter Optimiser *
+                *                                                   *
+                *                      v3.0.0                       *
+                *                                                   *
+                *                    Written by:                    *
+                *                 Robin Betz (2011)                 *
+                *                 Ross Walker (2004)                *
+                *          The Walker Molecular Dynamics Lab        *
+                *         University of California, San Diego       *
+                *            La Jolla, California, 92092            *
+                *                       USA                         *
+                *****************************************************
+
+*************************************************************************************
+                                Execution started at:
+|                             Wed Aug 29 16:38:13 2018
+
+|
+| Random seed = 1535571493
+ Reading job control file: fitK_bm3.in
+ Job Control: Read a total of 10 lines from job_control file. 6 options set.
+
+  Reading prmtop file    : bm3.prmtop
+   Prmtop   (unique): Found 10 unique bonds.
+   Prmtop   (unique): Found 16 unique angles.
+   Prmtop   (unique): Found 15 unique dihedrals.
+   Prmtop   (unique): Found 19 unique dihedral terms.
+ Reading mdcrd file: bm3_valid_structures.mdcrd
+  Reading mdcrd file    : bm3_valid_structures.mdcrd
+    Coordinate file passed format check
+  Reading energy file or directory  : energy_qm_bm3.dat
+        ---------------------------------------------------------------------
+        |                          OPTIONS SUMMARY                         |
+        |                          ---------------                          |
+        | Summary of Run Type Options:                                      |
+        |   Run Mode = FIT, Minimiser = SIMPLEX                             |
+        |   Function to be Fit = SUM_SQUARES_AMBER_STANDARD                 |
+        |                                                                   |
+        | Terms to be fit:                                                  |
+        |   K = 1, UNIQUE_BONDS = 10, UNIQUE ANGLES = 16                    |
+        |   UNIQUE DIHEDRALS = 15  TOTAL DIHEDRAL TERMS = 19                |
+        |   NBONDS = 15, NANGLES = 26, NDIHEDRALS = 33                      |
+        |                                 Total dimensions of fit = 1       |
+        |                                                                   |
+        | Sample structures for least squares fit = 300                     |
+        |                                                                   |
+        |                                                                   |
+        | Energy Correction Term (K) = TO BE FIT                            |
+        |                                                                   |
+        |           BONDFC_dx =     5.0000                                  |
+        |           BONDEQ_dx =     0.0200                                  |
+        |          ANGLEFC_dx =     1.0000                                  |
+        |          ANGLEEQ_dx =     0.0500                                  |
+        |       DIHEDRALBH_dx =     0.2000                                  |
+        |        DIHEDRALN_dx =     0.0100                                  |
+        |        DIHEDRALG_dx =     0.0500                                  |
+        |              K_dx =    10.0000                                    |
+        |                                                                   |
+        | Convergence requested to within 1.0000E-15                        |
+        |                                                                   |
+        | Estimate Memory Usage (per cpu):                                  |
+        |  Coordinate info will be read from disk as required.              |
+        |                OPTION STORAGE = 66 bytes                          |
+        |                PRMTOP STORAGE = 371394 bytes                      |
+        |            COORDINATE STORAGE = 134440 bytes                      |
+        |         SIMPLEX ARRAY STORAGE = 168 bytes                         |
+        |                                                                   |
+        |  TOTAL ESTIMATED MEMORY USAGE = 506068 bytes                      |
+        |                                                                   |
+        ---------------------------------------------------------------------
+
+ * Input structures passed dihedral span check.
+
+   ------------------------------- INITIAL PARAMETERS --------------------------------
+   Parameters for force field equation: AMBER_STANDARD:
+   (* means parameter is NOT constant during fit)
+                         *K = 0.000000 kcal/mol
+             (hc-c3) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (J3-hc) Kr = 333.1540 kcal/(mol A)^2, r_eq =   1.0950 A 
+             (SI-ha) Kr = 239.0000 kcal/(mol A)^2, r_eq =   1.4600 A 
+             (QH-ho) Kr = 400.1280 kcal/(mol A)^2, r_eq =   0.9570 A 
+             (c3-h1) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (c3-J3) Kr = 309.5690 kcal/(mol A)^2, r_eq =   1.5280 A 
+             (J3-SI) Kr = 130.2950 kcal/(mol A)^2, r_eq =   1.8520 A 
+             (SI-QH) Kr = 162.7980 kcal/(mol A)^2, r_eq =   1.6500 A 
+             (SI-QS) Kr = 170.0960 kcal/(mol A)^2, r_eq =   1.6340 A 
+             (QS-c3) Kr = 333.4290 kcal/(mol A)^2, r_eq =   1.4070 A 
+        (hc-c3-J3) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (hc-c3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (c3-J3-hc) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (J3-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (hc-J3-SI) Kt =  38.7870 kcal/(mol rad)^2,  th_eq = 107.5600 deg 
+        (hc-J3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (SI-QH-ho) Kt =  38.8180 kcal/(mol rad)^2,  th_eq = 117.1851 deg 
+        (QH-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-c3-h1) Kt =  50.8000 kcal/(mol rad)^2,  th_eq = 109.7800 deg 
+        (h1-c3-h1) Kt =  39.2400 kcal/(mol rad)^2,  th_eq = 108.4600 deg 
+        (c3-J3-SI) Kt =  55.3870 kcal/(mol rad)^2,  th_eq = 114.5880 deg 
+        (J3-SI-QH) Kt =  55.8640 kcal/(mol rad)^2,  th_eq = 114.0510 deg 
+        (J3-SI-QS) Kt =  57.7270 kcal/(mol rad)^2,  th_eq = 107.5420 deg 
+        (SI-QS-c3) Kt =  55.0040 kcal/(mol rad)^2,  th_eq = 126.7111 deg 
+        (QH-SI-QS) Kt =  63.6390 kcal/(mol rad)^2,  th_eq = 107.5290 deg 
+       (hc-c3-J3-hc) Kp =   0.1500 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-c3-J3-SI) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (SI-QS-c3-h1) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QS-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QH) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QS) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QS-c3) Kp =   0.1000 kcal/mol,  Np = 2.0000,  Phase = 180.0001 Deg 
+       (J3-SI-QS-c3) Kp =   0.3800 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QH-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+   -----------------------------------------------------------------------------------
+   Sum of squares for initial parameters = 37032928777112.7812500000 kcal^2/mol^2
+   R^2 value for initial parameters      =   0.425432
+   Calculated energy with initial parameters for structure 1 = -73.609778 KCal/mol
+   Actual energy for structure 1 should be                   = -351356.875819 KCal/mol
+
+   --------------------------------- SIMPLEX MINIMISATION ----------------------------
+   Minimising function SUM_SQUARES_AMBER_STANDARD, using the SIMPLEX METHOD
+   -------------------------------------- CONVERGENCE --------------------------------
+   Step     0: Conv=  5.3740E-05 min=37032928777112.7812,max=37034918964038.7031 avg37033923870575.7422
+   Step     1: Conv=  1.3206E+00 min= 217014.9562 max=1060637.3933 avg= 638826.1747
+   Step     2: Conv=  9.5160E-16 min= 107044.2221 max= 107044.2221 avg= 107044.2221
+   -----------------------------------------------------------------------------------
+
+   Convergence ratio of   9.5160E-16 is better than
+   convergence criteria of   1.0000E-15.
+   Function Converged - Total function evaluations = 104
+
+   Convergence to 1.0000E-15 in Simplex routine achieved after 50 cycles.
+   (25 INNER x 2 OUTER CYCLES)
+
+   ------------------------------- FINAL PARAMETERS ---------------------------------
+   Parameters for force field equation: AMBER_STANDARD:
+   (* means parameter is NOT constant during fit)
+                         *K = -351344.696226 kcal/mol
+             (hc-c3) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (J3-hc) Kr = 333.1540 kcal/(mol A)^2, r_eq =   1.0950 A 
+             (SI-ha) Kr = 239.0000 kcal/(mol A)^2, r_eq =   1.4600 A 
+             (QH-ho) Kr = 400.1280 kcal/(mol A)^2, r_eq =   0.9570 A 
+             (c3-h1) Kr = 330.6000 kcal/(mol A)^2, r_eq =   1.0969 A 
+             (c3-J3) Kr = 309.5690 kcal/(mol A)^2, r_eq =   1.5280 A 
+             (J3-SI) Kr = 130.2950 kcal/(mol A)^2, r_eq =   1.8520 A 
+             (SI-QH) Kr = 162.7980 kcal/(mol A)^2, r_eq =   1.6500 A 
+             (SI-QS) Kr = 170.0960 kcal/(mol A)^2, r_eq =   1.6340 A 
+             (QS-c3) Kr = 333.4290 kcal/(mol A)^2, r_eq =   1.4070 A 
+        (hc-c3-J3) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (hc-c3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (c3-J3-hc) Kt =  46.3400 kcal/(mol rad)^2,  th_eq = 109.8000 deg 
+        (J3-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (hc-J3-SI) Kt =  38.7870 kcal/(mol rad)^2,  th_eq = 107.5600 deg 
+        (hc-J3-hc) Kt =  39.4000 kcal/(mol rad)^2,  th_eq = 107.5800 deg 
+        (SI-QH-ho) Kt =  38.8180 kcal/(mol rad)^2,  th_eq = 117.1851 deg 
+        (QH-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-SI-ha) Kt =  47.7800 kcal/(mol rad)^2,  th_eq = 109.5000 deg 
+        (QS-c3-h1) Kt =  50.8000 kcal/(mol rad)^2,  th_eq = 109.7800 deg 
+        (h1-c3-h1) Kt =  39.2400 kcal/(mol rad)^2,  th_eq = 108.4600 deg 
+        (c3-J3-SI) Kt =  55.3870 kcal/(mol rad)^2,  th_eq = 114.5880 deg 
+        (J3-SI-QH) Kt =  55.8640 kcal/(mol rad)^2,  th_eq = 114.0510 deg 
+        (J3-SI-QS) Kt =  57.7270 kcal/(mol rad)^2,  th_eq = 107.5420 deg 
+        (SI-QS-c3) Kt =  55.0040 kcal/(mol rad)^2,  th_eq = 126.7111 deg 
+        (QH-SI-QS) Kt =  63.6390 kcal/(mol rad)^2,  th_eq = 107.5290 deg 
+       (hc-c3-J3-hc) Kp =   0.1500 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-c3-J3-SI) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QH-ho) Kp =   0.1600 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QH) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.2500 kcal/mol,  Np = 1.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-QS) Kp =   0.0000 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (hc-J3-SI-ha) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (SI-QS-c3-h1) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QS-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QH-ho) Kp =   0.1667 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (ha-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QH) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (c3-J3-SI-QS) Kp =   0.1556 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (J3-SI-QS-c3) Kp =   0.1000 kcal/mol,  Np = 2.0000,  Phase = 180.0001 Deg 
+       (J3-SI-QS-c3) Kp =   0.3800 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+       (QH-SI-QS-c3) Kp =   0.3833 kcal/mol,  Np = 3.0000,  Phase =   0.0000 Deg 
+   ----------------------------------------------------------------------------------
+|   Called the fitness function 105 times.
+   Function value with fitted parameters  =   107044.2221, R^2 =       0.4254
+   Calculated energy with fitted parameters for structure 1 =    -73.6098 KCal/mol
+
+ * Result passed angle validity check.
+ * Result passed bond validity check.
+
+|             Program Execution Completed at: Wed Aug 29 16:38:14 2018
+|                            Elapsed Time = 1.00 seconds
+*************************************************************************************
